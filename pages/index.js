@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import buildspaceLogo from '../assets/buildspace-logo.png';
+import YLLogo from '../assets/logo.png';
+import Logo from '../assets/universe.png';
 import { useState } from 'react';
 
 const Home = () => {
@@ -35,9 +36,10 @@ const onUserChangedText = (event) => {
   return (
     <div className="root">
       <Head>
-        <title>GPT-3 Writer | buildspace</title>
+        <title>Sapere Aude | Yangli Liu</title>
       </Head>
       <div className="container">
+      <Image src={Logo} alt="Header Image" />
         <div className="header">
           <div className="header-title">
             <h1>Sapere Aude</h1>
@@ -47,8 +49,9 @@ const onUserChangedText = (event) => {
           </div>
         </div>
         <div className="prompt-container">
-          <textarea placeholder="Ask your Question here" className="prompt-box" value={userInput} onChange={onUserChangedText}/>
-          <div className="prompt-buttons">
+          <textarea placeholder="Ask your Question here" className="prompt-box" 
+          value={userInput} onChange={onUserChangedText}/>
+          <div className="a-buttons">
             <a className="generate-button" onClick={callGenerateEndpoint}>
               <div className="generate">
               {isGenerating ? <span className="loader"></span> : 
@@ -60,7 +63,7 @@ const onUserChangedText = (event) => {
           <div className="output">
             <div className="output-header-container">
               <div className="output-header">
-                <h3>Output</h3>
+                <h3>Wise Words</h3>
               </div>
             </div>
             <div className="output-content">
@@ -77,8 +80,8 @@ const onUserChangedText = (event) => {
           rel="noreferrer"
         >
           <div className="badge">
-            <Image src={buildspaceLogo} alt="buildspace logo" />
-            <p>build with buildspace</p>
+            <Image src={YLLogo} alt="Amy's logo" />
+            <p>Yangli build with buildspace</p>
           </div>
         </a>
       </div>
