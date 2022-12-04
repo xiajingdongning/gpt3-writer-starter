@@ -75,7 +75,7 @@ const onUserChangedText = (event) => {
       </div>
       <div className="badge-container grow">
         <a
-          href="https://buildspace.so/builds/ai-writer"
+          href="http://www.liuyangli.ml/"
           target="_blank"
           rel="noreferrer"
         >
